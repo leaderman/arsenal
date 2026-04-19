@@ -5,6 +5,7 @@ if [ -f "$(dirname "$0")/.env" ]; then
 fi
 
 export HF_ENDPOINT=https://hf-mirror.com
+export HF_HUB_OFFLINE=1
 
 STABLE_SECONDS=3
 TRANSCRIBE_DIR=$DOWNLOAD_DIR/text
