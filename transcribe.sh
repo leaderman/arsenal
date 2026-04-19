@@ -78,9 +78,11 @@ while true; do
             --model mlx-community/whisper-large-v3-mlx \
             --language zh \
             --output-dir "$OUTPUT_DIR" \
-            --output-name "$audio_id.md" \
+            --output-name "$audio_id" \
             --output-format txt \
             --verbose False
+
+        mv "$OUTPUT_DIR/$audio_id.txt" "$OUTPUT_DIR/$audio_id.md"
 
         echo "音频文本: $audio_id.md"
     done
